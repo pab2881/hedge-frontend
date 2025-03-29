@@ -1,7 +1,27 @@
 {
+  "name": "hedge-frontend",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "concurrently -k -n \"🚀 Vite,🖥️ Server\" \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "nodemon server.cjs --watch server.cjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.7.0",
+    "helmet": "^6.0.1",
+    "node-fetch": "^2.7.0",
+    "winston": "^3.8.2"
+  },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.17",
     "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.9",
     "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.17"
+    "tailwindcss": "^4.0.17",
+    "vite": "^5.0.0"
   }
 }
